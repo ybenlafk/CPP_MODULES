@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 15:19:29 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/05 17:15:43 by ybenlafk         ###   ########.fr       */
+/*   Created: 2023/06/05 16:22:25 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/06/05 17:25:10 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Harl.hpp"
 
-#include <iostream>
-
-class   Harl
+int main(int ac , char **av)
 {
-    private:
-        void debug( void );
-        void info( void );
-        void warning( void );
-        void error( void );
-    public:
-        void  complain( std::string level );
-        Harl( void );
-        ~Harl( void );
-};
+    if (ac == 2)
+    {
+        Harl harl;
+        harl.harlFilter(av[1]);
+    }
+}
