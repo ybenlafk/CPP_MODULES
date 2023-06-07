@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 10:59:58 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/03 21:30:05 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:28:39 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ Phonebook::Phonebook()
 }
 Phonebook::~Phonebook()
 {
-    return ;
+    std::cout << "Phonebook destroyed" << std::endl;
 }
 
-void    Phonebook::add_contact(int i)
+void    Phonebook::add_contact(int *i)
 {
-    this->contacts[i].fill_contact(i + 1);
+    contacts[*i].fill_contact(*i + 1);
+    if (contacts[*i].get_first_name() != "")
+        (*i)++;
 }
 
 void   Phonebook::print_contact(int i)

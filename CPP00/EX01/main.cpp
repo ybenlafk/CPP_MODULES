@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:05:14 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/03 21:29:49 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:28:54 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
         if (i == 8)
             i = 0;
         if (!strcmp(command.c_str(), "ADD"))
-            phonebook.add_contact(i++);
+            phonebook.add_contact(&i);
         else if (!strcmp(command.c_str(), "SEARCH"))
             phonebook.search_contact();
         else if (!strcmp(command.c_str(), "EXIT"))

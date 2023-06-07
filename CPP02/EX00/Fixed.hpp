@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:45:30 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/06 20:01:27 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/07 12:43:21 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Fixed
 {
     private:
-        int fixed_point_nb;
+        int              value;
         static const int bits_fractional = 8;
     public:
         Fixed();
