@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:17:04 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/05 14:25:17 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/08 12:06:01 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ int main(int ac , char **av)
             while (std::getline(file, str))
             {
                 ft_replace(str, av[2], av[3]);
-                out << str << std::endl;
+                out << str;
+                if (!file.eof())
+                    out << std::endl;
             }
         }
     }
