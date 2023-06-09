@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:35:24 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 20:15:19 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/09 20:56:41 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ Fixed::~Fixed(){}
 
 Fixed::Fixed(Fixed const & obj)
 {
-    *this = obj;
+    if (this != &obj)
+        value = obj.value;
 }
 
 Fixed& Fixed::operator=(Fixed const &obg)

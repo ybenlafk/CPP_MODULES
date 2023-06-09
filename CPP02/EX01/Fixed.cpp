@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:35:24 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 17:26:14 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/09 20:56:28 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ Fixed::~Fixed()
 Fixed::Fixed(Fixed const & obj)
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = obj;
+    if (this != &obj)
+        value = obj.value;
 }
 
 Fixed& Fixed::operator=(Fixed const &obg)
