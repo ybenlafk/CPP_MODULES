@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:17:04 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/08 12:06:01 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/08 21:43:32 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 void ft_replace(std::string& str, std::string oldstr, std::string newstr) {
     size_t pos = str.find(oldstr);
 
-    while (pos != std::string::npos) {
+    while (pos != std::string::npos)
+    {
         str.erase(pos, oldstr.length()); 
         str.insert(pos, newstr);
 
