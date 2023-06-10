@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:52:46 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/07 13:39:47 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 13:49:20 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int Account::_totalNbWithdrawals = 0;
 
 void    Account::_displayTimestamp()
 {
-    std::time_t currentTime = std::time(nullptr);
+    std::time_t currentTime = std::time(NULL);
     std::tm* time = std::localtime(&currentTime);
     std::cout << "[" << std::put_time(time, "%Y%m%d_%H%M%S") << "]" << " ";
 }
