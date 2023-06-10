@@ -6,20 +6,21 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:52:43 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 21:45:59 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:44:13 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap clp("luffy");
-    ClapTrap clp2(clp);
-    ClapTrap clp3;
-    clp3 = clp2;
-    clp.attack("kaido");
-    clp2.takeDamage(6);
-    clp3.beRepaired(6);
+    FragTrap frag1;
+    FragTrap frag2(frag1);
+    FragTrap frag3;
+    frag3 = frag2;
+    frag1.attack("rojer");
+    frag1.takeDamage(30);
+    frag1.beRepaired(20);
+    frag1.highFivesGuys();
     return (0);
 }
