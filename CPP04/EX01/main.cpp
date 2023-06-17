@@ -5,21 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 20:52:43 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/16 15:42:24 by ybenlafk         ###   ########.fr       */
+/*   Created: 2023/06/10 13:10:02 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/06/17 18:31:43 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-    ClapTrap clp("luffy");
-    ClapTrap clp2(clp);
-    ClapTrap clp3;
-    clp3 = clp2;
-    clp.attack("kaido");
-    clp2.takeDamage(6);
-    clp3.beRepaired(6);
+    Animal *animal[4];
+
+    std::cout << "<-----------------------------Dogs------------------------------->" << std::endl;
+    for (int i = 0; i < 2; i++)
+        animal[i] = new Dog();
+    std::cout << "<-----------------------------Cats------------------------------->" << std::endl;
+    for (int i = 2; i < 4; i++)
+        animal[i] = new Cat();
+    std::cout << "<------------------------------------------------------------>" << std::endl;
+    for (int i = 0; i < 4; i++)
+        delete animal[i];
     return (0);
 }

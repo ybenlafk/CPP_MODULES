@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:22:25 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/05 17:25:10 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:38:02 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ int main(int ac , char **av)
         Harl harl;
         harl.harlFilter(av[1]);
     }
+    return (0);
 }

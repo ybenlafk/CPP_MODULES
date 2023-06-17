@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 20:52:43 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/16 15:42:24 by ybenlafk         ###   ########.fr       */
+/*   Created: 2023/06/10 13:09:36 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/06/17 18:16:27 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main()
+# include <iostream>
+# include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : public Animal
 {
-    ClapTrap clp("luffy");
-    ClapTrap clp2(clp);
-    ClapTrap clp3;
-    clp3 = clp2;
-    clp.attack("kaido");
-    clp2.takeDamage(6);
-    clp3.beRepaired(6);
-    return (0);
-}
+    private:
+        Brain   *brain;
+    public:
+        Dog();
+        Dog(Dog const &src);
+        ~Dog();
+        Dog& operator=(Dog const &src);
+        std::string getType() const;
+        void makeSound() const;
+};
+
+#endif

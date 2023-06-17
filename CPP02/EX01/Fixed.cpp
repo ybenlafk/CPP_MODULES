@@ -6,17 +6,19 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:35:24 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 20:56:28 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/14 20:02:27 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+// Precision is about how consistent your measurements are, 
+// while accuracy is about how close your measurements are to the correct answer.
 
-int get_power(int exponent, int base)
+int get_power(int fr, int base)
 {
     int power = 1;
-    for (int i = 0; i < exponent; ++i)
+    for (int i = 0; i < fr; ++i)
         power *= base;
     return (power);
 }
@@ -35,7 +37,7 @@ Fixed::Fixed(Fixed const & obj)
 {
     std::cout << "Copy constructor called" << std::endl;
     if (this != &obj)
-        value = obj.value;
+        *this = obj;
 }
 
 Fixed& Fixed::operator=(Fixed const &obg)
@@ -72,7 +74,7 @@ Fixed::Fixed(int const value)
 Fixed::Fixed(float const value)
 {
     std::cout << "Float constructor called" << std::endl;
-    this->value = roundf(value * get_power(bits_fractional, 2));
+    this->value = (int)roundf(value * get_power(bits_fractional, 2));
 }
 
 float Fixed::toFloat(void) const

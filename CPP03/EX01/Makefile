@@ -6,11 +6,11 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/09 20:17:26 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/09 23:21:02 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/16 16:24:55 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= ClapTrap
+NAME= ScavTrap
 SRC= ScavTrap.cpp ClapTrap.cpp main.cpp
 HEADER= ClapTrap.hpp ScavTrap.hpp
 FLAGS= -Wextra -Wall -Werror -std=c++98

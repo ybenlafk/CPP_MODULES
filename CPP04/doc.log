@@ -1,0 +1,33 @@
+
+<------------------------Virtual Functions------------------------>
+At a low level, virtual member functions in C++ are implemented using a mechanism called the virtual function table (V-table), 
+which is a table of function pointers that is created by the compiler for each class that has virtual functions.
+
+When a class is defined with virtual member functions, the compiler adds a pointer to the V-table as a hidden member variable of the class.
+This pointer is initialized by the constructor of the class and points to the V-table for that class.
+The V-table contains a list of function pointers for each virtual function in the class, in the order they were declared.
+
+When a virtual member function is called on an object, the compiler generates code that uses the V-table to determine which function to call.
+Specifically, the compiler generates code that dereferences the V-table pointer to get the address of the appropriate function pointer,
+and then calls the function using that pointer.
+
+When a derived class overrides a virtual member function from a base class,
+the compiler generates a new V-table for the derived class that includes the function pointer for the overridden function. 
+When an object of the derived class is created, its V-table pointer is initialized to point to the new V-table.
+
+When a virtual member function is called on an object of a derived class,
+the compiler generates code that uses the V-table for that class to determine which function to call. 
+If the derived class overrides the function, the address of the overridden function is used, otherwise the address of the base class's function is used.
+
+In summary, virtual member functions in C++ are implemented at a low level using V-tables, 
+which are tables of function pointers that are used to determine which function to call at runtime.
+When a class with virtual functions is defined, the compiler generates a V-table for that class, and when a derived class overrides a virtual function,
+a new V-table is generated for that class. When a virtual function is called on an object,
+the appropriate function is determined using the V-table for the object's class.
+
+<------------------------shallow copy vs deep copy------------------------>
+
+a shallow copy copies the member variables of an object, including any pointers,
+while a deep copy creates a new object with its own copies of any objects pointed to by member variables.
+Shallow copies can result in multiple objects sharing the same data,
+while deep copies ensure that each object has its own copy of the data.

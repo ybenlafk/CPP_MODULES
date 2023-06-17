@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:29:10 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 23:17:30 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/16 15:40:29 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ ClapTrap& ClapTrap::operator = (ClapTrap const &clp)
         energy_points = clp.energy_points;
         attack_damage = clp.attack_damage;
     }
+    std::cout << "ClapTrap assignment operator called" << std::endl;
     return (*this);
 }
 

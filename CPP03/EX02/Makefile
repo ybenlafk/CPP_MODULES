@@ -6,11 +6,11 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/09 20:17:26 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/09 23:41:42 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/16 16:23:09 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= ClapTrap
+NAME= FragTrap
 SRC= ClapTrap.cpp FragTrap.cpp main.cpp
 HEADER= ClapTrap.hpp FragTrap.hpp
 FLAGS= -Wextra -Wall -Werror -std=c++98

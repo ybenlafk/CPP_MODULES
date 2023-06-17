@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 20:16:35 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/04 20:31:36 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 17:53:22 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
     Zombie *Dio = newZombie("Dio");
     Jotaro->announce();
     Dio->announce();
-    randomChump("jack");
+    randomChump("polnareff");
     delete Jotaro;
     delete Dio;
     return (0);

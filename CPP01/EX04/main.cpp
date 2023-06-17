@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:17:04 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/08 21:43:32 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:28:28 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_replace(std::string& str, std::string oldstr, std::string newstr) {
         str.erase(pos, oldstr.length()); 
         str.insert(pos, newstr);
 
-        pos = str.find(oldstr, pos + newstr.length());
+        pos = str.find(oldstr, pos);
     }
 }
 
@@ -32,9 +32,13 @@ int main(int ac , char **av)
     if (ac == 4)
     {
         std::ifstream file(av[1]);
+        if (file.fail())
+            return (std::cout << "Error: " <<  std::endl, 1);
         std::string dot = ".replace";
         std::string outfile = av[1] + dot;
         std::ofstream out(outfile);
+        if (out.fail())
+            return (std::cout << "Error: " <<  std::endl, 1);
         if (file.is_open())
         {
             std::string str;
@@ -46,7 +50,10 @@ int main(int ac , char **av)
                     out << std::endl;
             }
         }
+        file.close();
+        out.close();
     }
     else
         std::cout << "Bad arguments" << std::endl;
+    return (0);
 }

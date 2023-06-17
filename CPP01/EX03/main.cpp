@@ -6,13 +6,12 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:12:53 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/05 11:13:25 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:10:45 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-
 
 int main()
 {

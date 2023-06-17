@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:24:44 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/05 17:44:27 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:41:40 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void    Harl::harlFilter( std::string level )
 
     for(int i = 0; i < 4; i++)
     {
-        if (level == list[i])
+        if (!level.compare(list[i]))
         {
             stat = i;
             break;
@@ -85,7 +85,6 @@ void    Harl::harlFilter( std::string level )
             (this->*ptr[3])();
             std::cout << std::endl;
         default:
-            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
             break;
     }
 }

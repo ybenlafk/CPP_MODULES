@@ -6,14 +6,13 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/04 20:53:43 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/05 12:16:53 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/10 18:20:56 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= Program
 
 SRCS= main.cpp
-
 OBGJ= $(SRCS:.cpp=.o)
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -23,6 +22,9 @@ all: $(NAME)
 
 $(NAME): $(OBGJ)
 	$(CC) $(CFLAGS) $(OBGJ) -o $(NAME)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(FRM) $(OBGJ) 

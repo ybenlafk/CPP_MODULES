@@ -6,13 +6,15 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/10 12:54:54 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/17 10:08:56 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/17 18:28:10 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= Program
-SRC= Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
-HEADER=Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+SRC= Animal.cpp Dog.cpp Cat.cpp\
+	WrongAnimal.cpp WrongCat.cpp\
+	Brain.cpp main.cpp
+HEADER=Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 FLAGS= -Wextra -Wall -Werror -std=c++98
 CPP= c++
 OBG= $(SRC:.cpp=.o)

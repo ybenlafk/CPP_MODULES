@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 19:45:30 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/11 15:22:57 by ybenlafk         ###   ########.fr       */
+/*   Created: 2023/06/10 12:59:40 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/06/17 10:10:56 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 
-class Fixed
+class   WrongAnimal
 {
-    private:
-        int              value;
-        static const int bits_fractional = 8;
+    protected:
+        std::string type;
     public:
-        Fixed();
-        Fixed(Fixed const &obj);
-        ~Fixed();
-        Fixed& operator=(Fixed const &obj);
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
+        WrongAnimal();
+        WrongAnimal(std::string type);
+        WrongAnimal(WrongAnimal const & src);
+        ~WrongAnimal();
+        WrongAnimal & operator=(WrongAnimal const & src);
+        std::string getType() const;
+        void makeSound() const;
 };
+
 #endif

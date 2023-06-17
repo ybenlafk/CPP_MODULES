@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 20:52:43 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/16 15:42:24 by ybenlafk         ###   ########.fr       */
+/*   Created: 2023/06/17 17:45:42 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/06/17 17:46:25 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+#include <iostream>
 
-int main()
+class Brain
 {
-    ClapTrap clp("luffy");
-    ClapTrap clp2(clp);
-    ClapTrap clp3;
-    clp3 = clp2;
-    clp.attack("kaido");
-    clp2.takeDamage(6);
-    clp3.beRepaired(6);
-    return (0);
-}
+    private:
+        std::string ideas[100];
+    public:
+        Brain();
+        Brain(Brain const & src);
+        ~Brain();
+        Brain & operator=(Brain const & src);
+};
+
+#endif

@@ -6,11 +6,12 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:45:30 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/09 20:09:27 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:22:48 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
@@ -52,3 +53,4 @@ class Fixed
 };
 
 std::ostream& operator << (std::ostream &os, Fixed const &obj);
+#endif
