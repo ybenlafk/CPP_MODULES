@@ -6,7 +6,7 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/10 12:54:54 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/18 09:33:46 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/18 09:44:48 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ OBG= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBG)
-	$(CPP) $(FLAGS) $(OBG) -o $(SRC)
+	$(CPP) $(FLAGS) $(OBG) -o $(NAME)
 
-%.o: %.cpp $(HEADER)
+%.o : %.cpp $(HEADER)
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
