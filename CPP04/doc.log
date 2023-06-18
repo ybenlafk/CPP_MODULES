@@ -1,3 +1,16 @@
+<------------------------What is polymorphism?------------------------>
+
+In C++, there are two main types of polymorphism: compile-time polymorphism and runtime polymorphism.
+
+Compile-time polymorphism is achieved through function overloading and templates.
+Function overloading allows multiple functions to have the same name but different parameters,
+while templates allow you to define generic functions or classes that can work with a variety of data types.
+
+Runtime polymorphism is achieved through inheritance and virtual functions.
+Inheritance allows a class to derive properties and behavior from another class,
+while virtual functions allow a function to be overridden in a subclass, so that the subclass's implementation is used
+instead of the base class's implementation when the function is called on an object of the subclass.
+
 
 <------------------------Virtual Functions------------------------>
 At a low level, virtual member functions in C++ are implemented using a mechanism called the virtual function table (V-table), 
