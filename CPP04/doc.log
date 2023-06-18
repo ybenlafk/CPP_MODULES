@@ -44,3 +44,6 @@ a shallow copy copies the member variables of an object, including any pointers,
 while a deep copy creates a new object with its own copies of any objects pointed to by member variables.
 Shallow copies can result in multiple objects sharing the same data,
 while deep copies ensure that each object has its own copy of the data.
+
+
+I'm thrilled to announce the release of my latest game, Cub3D. Using the powerful raycasting technique, I've created a visually stunning 3D world that players can explore from a first-person perspective. In this game, you navigate through a complex maze of rooms and hallways, trying to find your way to the end while avoiding obstacles and solving puzzles. I developed Cub3D using the miniLibX library, which allowed me to create a smooth, responsive experience and add immersive visual effects. Building this game was a challenging and rewarding experience that taught me a lot about programming and game development. I'm excited to share it with others and see how they fare in the world of Cub3D!
