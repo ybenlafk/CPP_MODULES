@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 17:57:48 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/17 18:05:31 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/19 21:09:03 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ Brain::Brain()
 Brain::Brain(Brain const & src)
 {
     std::cout << "Brain copy constructor called" << std::endl;
-    if (this != &src)
-        *this = src;
+    *this = src;
 }
 
 Brain::~Brain()

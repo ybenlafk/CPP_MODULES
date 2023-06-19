@@ -6,12 +6,12 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:26:57 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/18 23:31:16 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/19 09:36:03 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
-
+#include "Cure.hpp"
 MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; i++)
@@ -43,7 +43,7 @@ MateriaSource::~MateriaSource()
         delete Matrs[i];
 }
 
-void MateriaSource::learnMateria(AMateria *m)
+void    MateriaSource::learnMateria(AMateria *m)
 {
     for (int i = 0; i < 4; i++)
     {
@@ -57,10 +57,12 @@ void MateriaSource::learnMateria(AMateria *m)
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
+    // for (int i = 0; Matrs[i]; i++)
+    //     std::cout << "Matrs[i]->getType() = " << Matrs[i]->getType() << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (Matrs[i] && Matrs[i]->getType() == type)
             return (Matrs[i]->clone());
     }
-    return (0);
+    return (NULL);
 }

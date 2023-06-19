@@ -6,13 +6,13 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 09:44:24 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/18 23:40:53 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:24:25 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(): type(NULL) {}
+AMateria::AMateria(): type("") {}
 
 AMateria::AMateria(std::string const & type): type(type) {}
 

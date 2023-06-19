@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 10:25:02 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/18 10:26:55 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:27:42 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::~Cure(){}
 
 Cure::Cure(Cure const & obg)
 {
-    if (this != &obg)
+    // if (this != &obg)
         *this = obg;
 }
 

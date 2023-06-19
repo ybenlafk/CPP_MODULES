@@ -6,7 +6,7 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/18 09:22:24 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/18 23:52:31 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/06/19 19:18:42 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER= AMateria.hpp Cure.hpp Ice.hpp\
 		ICharacter.hpp IMateriaSource.hpp\
 		Character.hpp MateriaSource.hpp
 
-FLAGS= -Wextra -Wall -Werror -std=c++98
+FLAGS=  -std=c++98 -g
 CPP= c++
 OBG= $(SRC:.cpp=.o)
 
