@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 13:07:40 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/18 09:11:35 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:14:07 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ Cat &Cat::operator=(Cat const &src)
     if (this != &src)
     {
         type = src.type;
-        brain = src.brain;
+        delete brain;
+        brain = new Brain(*(src.brain));
     }
     return (*this);
 }

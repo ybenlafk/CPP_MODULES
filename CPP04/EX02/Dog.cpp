@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 13:09:03 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/18 09:11:42 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:13:58 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Dog &Dog::operator=(Dog const &src)
     if (this != &src)
     {
         type = src.type;
-        brain = src.brain;   
+        delete brain;
+        brain = new Brain(*(src.brain));  
     }
     return (*this);
 }
