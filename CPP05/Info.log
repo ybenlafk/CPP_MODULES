@@ -1,0 +1,19 @@
+In C++, the try-catch construct is implemented using a combination of compiler-generated code and runtime support.
+At a high level, the try-catch statement allows you to handle exceptions that might be thrown during program execution.
+
+When the C++ compiler encounters a try-catch block in your code, it generates low-level code that sets up a special data structure called the exception frame. 
+This data structure contains information about the current state of the program,
+including the current function call stack and any variables that are currently in scope.
+
+When an exception is thrown, the runtime system uses the information stored in the exception frame to determine which catch block should be
+executed to handle the exception. This process is called stack unwinding, and it involves unwinding the call stack until a suitable catch block is found.
+
+Once a catch block is found, the runtime system jumps to that block and executes the code inside it.
+The catch block can access the exception object that was thrown and can use this information to handle the error in an appropriate way.
+
+Once the catch block has finished executing, control is returned to the point in the program where the exception was thrown,
+and the program continues executing as normal.
+
+In summary, the try-catch construct in C++ is implemented using a combination of compiler-generated code and runtime support.
+The compiler generates low-level code that sets up a special data structure called the exception frame,
+which is used by the runtime system to handle exceptions that might be thrown during program execution.

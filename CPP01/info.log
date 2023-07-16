@@ -1,0 +1,14 @@
+A pointer is essentially a variable that stores the memory address of another object. When you declare a pointer variable,
+the compiler reserves a block of memory to hold the address of the object that the pointer will point to
+When you assign a value to the pointer variable, you are storing the memory address of the object it points to.
+To access the value of the object, you dereference the pointer using the * operator,
+which tells the compiler to retrieve the value stored at the memory address stored in the pointer variable.
+
+A reference, on the other hand, is implemented as an alias for an existing object. When you declare a reference variable,
+the compiler creates a new name for an existing object.
+This means that the reference variable does not have a separate memory address of its own - it simply refers to the same memory location as the original object.
+To access the value of the object, you simply use the reference variable itself, without the need for any dereferencing operator.
+
+In terms of memory usage, pointers typically require more memory than references,
+because they must store the memory address of the object they point to.
+References, on the other hand, do not require any additional memory beyond that of the original object.
