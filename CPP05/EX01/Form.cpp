@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 11:12:49 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/16 14:07:25 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/07/16 15:05:41 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ std::ostream &operator<<(std::ostream &o, Form const &obg)
 }
 
 const char* Form::GradeTooHighException::what() const throw(){return ("Grade is too high");}
-const char* Form::GradeTooLowException::what() const throw(){return ("Grade is too low");}
 
+const char* Form::GradeTooLowException::what() const throw(){return ("Grade is too low");}
 
 void Form::beSigned(Bureaucrat const &bur)
 {
