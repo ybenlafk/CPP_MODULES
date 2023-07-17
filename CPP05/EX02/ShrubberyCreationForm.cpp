@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 13:47:52 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/17 14:49:09 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/07/17 15:47:53 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,17 @@ ShrubberyCreationForm::ShrubberyCreationForm(){}
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("", 145, 137), target(target){}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubbery", 145, 137), target(target){}
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &obg){*this = obg;}
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &obg) : AForm(obg) {*this = obg;}
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &obg)
 {
     if (this != &obg)
+    {
+        AForm::operator=(obg);
         this->target = obg.target;
+    }
     return (*this);
 }
 

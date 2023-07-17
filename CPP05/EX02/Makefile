@@ -6,12 +6,13 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/15 08:47:26 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/07/17 14:53:00 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/07/17 16:13:55 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= Program
-SRC= Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp main.cpp
+SRC= Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
+	PresidentialPardonForm.cpp RobotomyRequestForm.cpp main.cpp
 FLAGS= -Wextra -Wall -Werror -std=c++98
 CPP= c++
 OBG= $(SRC:.cpp=.o)

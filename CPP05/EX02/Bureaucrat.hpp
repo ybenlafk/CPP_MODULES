@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 22:19:19 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/17 14:54:56 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:09:15 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Bureaucrat
         void                incrementGrade();
         void                decrementGrade();
         void                signForm(AForm const &form);
+        void                executeForm(AForm const & form);
         class GradeTooHighException : public std::exception
         {
             public:
