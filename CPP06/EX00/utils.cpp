@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 11:11:52 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/18 13:19:10 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:53:31 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,7 @@ void    DoubleHanndler(std::string str)
     else
         std::cout << "int: " << static_cast<int>(nb) << std::endl;
     
-    if (hasDecimal_f(static_cast<float>(nb)))
+    if (hasDecimal_d(nb))
         std::cout << "float: " << static_cast<float>(nb) << "f" << std::endl;
     else
         std::cout << "float: " << static_cast<float>(nb) << ".0f" << std::endl;
