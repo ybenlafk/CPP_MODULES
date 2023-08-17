@@ -16,6 +16,7 @@
 #include <iostream>
 #include <cfloat>
 #include <cmath>
+#include <climits>
 
 class ScalarConverter
 {
