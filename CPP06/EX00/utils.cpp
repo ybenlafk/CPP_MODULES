@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 11:11:52 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/18 13:53:31 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/08/26 09:18:48 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ long long strToLong(std::string str)
     
     std::stringstream ss(str);
     ss >> result;
-    return result;
+    return (result);
 }
 
 float strToFloat(std::string str)
@@ -32,7 +32,7 @@ float strToFloat(std::string str)
     std::stringstream ss(str);
     float result;
     ss >> result;
-    return result;
+    return (result);
 }
 
 double strToDouble(std::string str)
@@ -40,7 +40,7 @@ double strToDouble(std::string str)
     std::stringstream ss(str);
     double result;
     ss >> result;
-    return result;
+    return (result);
 }
 
 bool isInt(std::string str)
@@ -60,11 +60,9 @@ bool isChar(std::string str)
 {
     if (str.empty())
         return (false);
-    if (str.length() != 3)
+    if (str.length() != 1)
         return (false);
-    if (str[0] != '\'' || str[2] != '\'')
-        return (false);
-    if (!isalpha(str[1]))
+    if (!isalpha(str[0]))
         return (false);
     return (true);
 }
@@ -134,7 +132,7 @@ void    IntHanndler(std::string str)
 
 void    CharHanndler(std::string str)
 {
-    char c = str[1];
+    char c = str[0];
     std::cout << "char: " << c << std::endl;
     std::cout << "int: " << static_cast<int>(c) << std::endl;
     std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
@@ -157,7 +155,10 @@ void    FloatHanndler(std::string str)
     else
         std::cout << "int: " << static_cast<int>(nb) << std::endl;
     
-    std::cout << "float: " << static_cast<float>(nb) << "f" << std::endl;
+    if (hasDecimal_f(nb))
+        std::cout << "float: " << static_cast<float>(nb) << "f" << std::endl;
+    else
+        std::cout << "float: " << static_cast<float>(nb) << ".0f" << std::endl;
     if (hasDecimal_d(static_cast<double>(nb)))
         std::cout << "double: " << static_cast<double>(nb) << std::endl;
     else

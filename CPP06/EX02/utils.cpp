@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/26 10:08:01 by ybenlafk          #+#    #+#             */
+/*   Updated: 2023/08/26 10:08:01 by ybenlafk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Base.hpp"
 
@@ -30,23 +41,29 @@ void identify(Base* p)
 
 void identify(Base& p)
 {
-    try {
-        dynamic_cast<A&>(p);
+    try
+    {
+        (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
         return;
-    } catch (std::exception &) {}
+    }
+    catch (std::exception &) {}
 
-    try {
-        dynamic_cast<B&>(p);
+    try
+    {
+        (void)dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
         return;
-    } catch (std::exception &) {}
+    } 
+    catch (std::exception &) {}
 
-    try {
-        dynamic_cast<C&>(p);
+    try
+    {
+        (void)dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
         return;
-    } catch (std::exception &) {}
+    }
+    catch (std::exception &) {}
 
     std::cout << "Unknown" << std::endl;
 }
