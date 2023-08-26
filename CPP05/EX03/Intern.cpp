@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 08:01:05 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/18 08:26:11 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/08/25 11:12:19 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ AForm   *Intern::makeForm(std::string FormName, std::string target)
             return(std::cout << "Intern creates " << FormName << std::endl, new PresidentialPardonForm(target));
         default:
         {
-            std::cout << "❌ Error: this form doesn't exist." << std::endl;
+            std::cout << "this form doesn't exist." << std::endl;
             break;
         }
     }

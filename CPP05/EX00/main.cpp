@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 08:42:34 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/15 13:43:39 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/08/25 10:39:45 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,6 @@ int main()
     try
     {
         Bureaucrat third("third", 151);
-        std::cout << third << std::endl;
-        third.decrementGrade();
-        std::cout << third << std::endl;
     }
     catch(std::exception& e)
     {
@@ -54,9 +51,6 @@ int main()
     try
     {
         Bureaucrat fourth("fourth", 0);
-        std::cout << fourth << std::endl;
-        fourth.incrementGrade();
-        std::cout << fourth << std::endl;
     }
     catch(std::exception& e)
     {

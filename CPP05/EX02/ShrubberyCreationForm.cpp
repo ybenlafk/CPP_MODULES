@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 13:47:52 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/07/17 15:47:53 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/08/25 11:05:48 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
             file.close();
         }
         else 
-        {
             std::cout << "Error: " << std::endl; return ;
-        }
     }
 }
