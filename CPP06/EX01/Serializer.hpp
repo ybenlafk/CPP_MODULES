@@ -14,6 +14,7 @@
 #define PP
 
 #include <iostream>
+#include <stdint.h>
 
 typedef struct data
 {
