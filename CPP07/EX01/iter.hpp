@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 15:44:33 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/08/27 12:34:31 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/08/27 12:36:21 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ void iter(T *array, int size, F job)
         job(array[i]);
 }
 
-template <typename T>
-void display(T const &word){std::cout << word << std::endl;}
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
 
