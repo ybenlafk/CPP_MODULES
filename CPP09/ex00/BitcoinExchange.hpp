@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:43:01 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/08/30 13:41:48 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/03 15:47:17 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ class BitcoinExchange
         BitcoinExchange(BitcoinExchange const &obg);
         ~BitcoinExchange();
         BitcoinExchange &operator=(BitcoinExchange const &obg);
-        std::map<std::string ,std::string> getLol() const;
-        void    getDataFile(std::string file);
-        void    parse(std::string line);
+        std::map<std::string, std::string>    getDataFile();
 };
+
+std::string getDate(std::string line, char c);
+int countChar(std::string line, char c);
+std::string getRest(std::string line, char c);
 
 #endif

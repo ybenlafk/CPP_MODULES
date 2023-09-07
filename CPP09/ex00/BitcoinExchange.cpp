@@ -6,13 +6,13 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:43:40 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/08/30 19:04:38 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/03 15:49:49 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-BitcoinExchange::BitcoinExchange() { _lol["lol"] = "lol"; }
+BitcoinExchange::BitcoinExchange() {}
 
 BitcoinExchange::BitcoinExchange(std::map<std::string ,std::string> lol) : _lol(lol) {}
 
@@ -22,17 +22,6 @@ BitcoinExchange::~BitcoinExchange() {}
 
 BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &obg) {this->_lol = obg._lol; return (*this);}
 
-std::map<std::string ,std::string> BitcoinExchange::getLol() const {return this->_lol;}
-
-bool checkLine(std::string line)
-{
-    int i = 0;
-    while (line[i] && line[i] != '|')
-        i++;
-    if (line[i] != '|')
-        return (false);
-    return (true);
-}
 std::string ft_strtrim(std::string s1, std::string set)
 {
     std::size_t start = s1.find_first_not_of(set);
@@ -43,11 +32,11 @@ std::string ft_strtrim(std::string s1, std::string set)
     return s1.substr(start, end - start + 1);
 }
 
-std::string getDate(std::string line)
+std::string getDate(std::string line, char c)
 {
     std::string date;
     int i = 0;
-    while (line[i] && line[i] != '|')
+    while (line[i] && line[i] != c)
         date += line[i++];
     return (date);
 }
@@ -65,39 +54,31 @@ int countChar(std::string line, char c)
     return (count);
 } 
 
-std::string getRest(std::string line)
+std::string getRest(std::string line, char c)
 {
     std::string rest;
     int i;
-    for (i = 0; line[i] && line[i] != '|'; i++);
+    for (i = 0; line[i] && line[i] != c; i++);
     i++;
     for (; line[i]; i++)
         rest += line[i];
     return (rest);
 }
 
-void  
-
-void   BitcoinExchange::parse(std::string line)
+std::map<std::string, std::string>    BitcoinExchange::getDataFile()
 {
-    static int i = 0;
-    if (!i++)
-    {
-       
-    }
-}
-
-void    BitcoinExchange::getDataFile(std::string file)
-{
-    std::ifstream fileName(file);
-    if (fileName.fail())
-        std::cout << "Bad File" << std::endl;
+    std::ifstream fileName("data.csv");
     if (fileName.is_open())
     {
         std::string line;
+        getline(fileName, line);
         while (getline(fileName, line))
-        {
-            parse(line);
-        }
+            this->_lol[getDate(line, ',')] = getRest(line, ',');
     }
+    else
+    {
+        std::cout << "Error: File not found" << std::endl;
+        throw std::exception();
+    }
+    return (this->_lol);
 }
