@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 21:09:05 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/07 14:26:24 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/15 11:12:41 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ void    Contact::fill_contact(int index)
     nickname = get_in("Nickname:\n");
     phone_number = get_in("Phone number :\n");
     darkest_secret = get_in("Darkest secret :\n");
-    if (first_name == "" || last_name == "" || nickname == "" || phone_number == "" || darkest_secret == "")
+    if (first_name == "" || last_name == "" ||
+        nickname == "" || phone_number == "" || darkest_secret == "")
     {
         first_name = "";
         last_name = "";

@@ -5,37 +5,29 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/18 09:22:24 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/09/08 17:51:20 by ybenlafk         ###   ########.fr        #
+#    Created: 2023/09/17 23:37:43 by ybenlafk          #+#    #+#              #
+#    Updated: 2023/09/17 23:37:57 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= Program
-SRC= AMateria.cpp Cure.cpp Ice.cpp\
-	Character.cpp MateriaSource.cpp\
-	main.cpp
-HEADER= AMateria.hpp Cure.hpp Ice.hpp\
-		ICharacter.hpp IMateriaSource.hpp\
-		Character.hpp MateriaSource.hpp
-
-FLAGS= -Wextra -Wall -Werror -std=c++98 -g
-CPP= c++
-OBG= $(SRC:.cpp=.o)
+NAME= RPN
+SRC= RPN.cpp main.cpp
+OBJ= $(SRC:.cpp=.o)
+FLAGS= -Wall -Wextra -Werror -std=c++98
+CC= c++
 
 all: $(NAME)
 
-$(NAME): $(OBG)
-	$(CPP) $(FLAGS) $(OBG) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.cpp $(HEADER)
-	$(CPP) $(FLAGS) -c $< -o $@
+%.o: %.cpp	*.hpp
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBG)
+	rm -rf $(OBJ)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 09:46:45 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/06/19 21:20:13 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/08 17:51:49 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "MateriaSource.hpp"
 
 int main()
-{    
+{
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());

@@ -6,7 +6,7 @@
 #    By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/25 15:13:04 by ybenlafk          #+#    #+#              #
-#    Updated: 2023/06/07 12:28:32 by ybenlafk         ###   ########.fr        #
+#    Updated: 2023/09/16 17:02:16 by ybenlafk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS= main.cpp contact.cpp phonebook.cpp
 HEADER= contact.hpp phonebook.hpp
 OBGJ= $(SRCS:.cpp=.o)
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 #-stdlib=libc++
 FRM = rm -rf
 
 all: $(NAME)
