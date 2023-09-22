@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 23:39:06 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/09/18 11:55:05 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:51:21 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,11 @@ int     RPN(std::stack<std::string> tab)
             else if (tab.top() == "*")
                 stack.push(b * a);
             else if (tab.top() == "/")
+            {
+                if (a == 0)
+                    return (std::cout << "Error" << std::endl, 0);
                 stack.push(b / a);
+            }
         }
         else
         {

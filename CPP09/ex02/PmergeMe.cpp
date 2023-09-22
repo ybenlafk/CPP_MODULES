@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:26:37 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/09/22 13:01:48 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/22 15:20:42 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,17 @@ void    PmergeMe::sort()
             }
         }
     }
+    for (std::list<node*>::iterator it = chunks.begin(); it != chunks.end(); it++)
+    {
+        this->first.push_back((*it)->val1);
+        this->second.push_back((*it)->val2);
+    }
+    
+    this->first.front() = this->second.front();
+    this->second.erase(this->second.begin());
+    
     int l = 3;
-    for (int i = 3; i < (int)list.size() * 2; i++)
+    for (int i = 3; i < (int)list.size() * 2; i++)  
     {
         if (i == Jacob[l])
         {
