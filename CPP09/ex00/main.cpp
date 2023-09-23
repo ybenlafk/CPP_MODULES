@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:43:37 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/09/04 12:24:48 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:33:10 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,27 @@ void SearchDate(std::string data, std::string value, std::map<std::string, std::
 bool isValidDate(std::string date)
 {
     int i = 0;
+    std::string word = "";
     while (date[i] && date[i] != '-')
         if (!isdigit(date[i++])) return (false);
     if (i != 4 || date[i] != '-') return (false);
     i++;
     while (date[i] && date[i] != '-')
-        if (!isdigit(date[i++])) return (false);
-    if (i != 7 || date[i] != '-') return (false);
+    {
+        if (!isdigit(date[i])) return (false);
+        else word += date[i];
+        i++;
+    }
+    if (i != 7 || date[i] != '-' || std::atoi(word.c_str()) > 12 || std::atoi(word.c_str()) < 1) return (false);
     i++;
+    word = "";
     while (date[i] && date[i] != ' ')
-        if (!isdigit(date[i++])) return (false);
-    if (i != 10 || date[i] != ' ') return (false);
+    {
+        if (!isdigit(date[i])) return (false);
+        else word += date[i];
+        i++;
+    }
+    if (i != 10 || date[i] != ' ' || std::atoi(word.c_str()) > 31 || std::atoi(word.c_str()) < 1) return (false);
     i++;
     if (date[i] != '\0') return (false);
     return (true);

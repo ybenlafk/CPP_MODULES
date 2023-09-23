@@ -6,7 +6,7 @@
 /*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 11:12:49 by ybenlafk          #+#    #+#             */
-/*   Updated: 2023/08/25 11:07:23 by ybenlafk         ###   ########.fr       */
+/*   Updated: 2023/09/23 11:54:58 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Form::Form(std::string const name, int const g1, int const g2) :name(name) ,is_s
         throw Form::GradeTooLowException();
 }
 
-Form::Form(Form const &obg) :name(obg.name) ,is_signed(false) ,grade_sign_it(obg.grade_sign_it) ,grade_execute(obg.grade_execute){}
+Form::Form(Form const &obg) : name(obg.name) ,is_signed(false) ,grade_sign_it(obg.grade_sign_it) ,grade_execute(obg.grade_execute){}
 
 Form &Form::operator=(Form const &obg)
 {
